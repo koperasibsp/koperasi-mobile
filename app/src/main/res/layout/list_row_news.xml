@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+
+    <TextView
+        android:id="@+id/newsTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title News"
+        android:textSize="16dp"
+        android:textFontWeight="2"
+        android:textStyle="bold"
+        android:textColor="@color/blacktext"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_below="@+id/newsTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contentImage"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/newsImage"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher_round"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/newsTime"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/contentImage"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="@color/darkGray"
+        android:text="Times"/>
+
+    <TextView
+        android:id="@+id/newsDescription"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/newsTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:minLines="1"
+        android:maxLines = "2"
+        android:textColor="@color/blacktext"
+        android:text="Description"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>

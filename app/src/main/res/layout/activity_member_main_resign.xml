@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/background_light"
+  android:fitsSystemWindows="true"
+  >
+  <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/main.appbar"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:fitsSystemWindows="true"
+    >
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+      android:id="@+id/main.collapsing"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_scrollFlags="scroll|exitUntilCollapsed"
+      android:fitsSystemWindows="true"
+      app:contentScrim="?attr/colorPrimary"
+      app:expandedTitleMarginStart="48dp"
+      app:expandedTitleMarginEnd="64dp"
+      android:background="@color/white"
+      android:paddingTop="20dp"
+      android:paddingRight="15dp"
+      android:paddingLeft="15dp"
+      >
+      <ImageView
+        android:id="@+id/main.backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pengunduran_diri"
+        android:fitsSystemWindows="true"
+        app:layout_collapseMode="parallax"
+        />
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="15dp"
+      android:orientation="vertical">
+      <LinearLayout
+        android:id="@+id/layoutText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="bottom">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PENGAJUAN"
+        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeStepGranularity="2sp"
+        android:textColor="@color/textgreen"
+        android:id="@+id/recomended"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" RESIGN"
+        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeStepGranularity="2sp"
+        android:textColor="@color/textblue"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/recomended"/>
+
+    </LinearLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:textColorHint="@color/darkGray"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:boxStrokeColor="@color/btnbsp"
+        app:hintTextAppearance="@style/HintText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+          android:nextFocusDown="@+id/tanggal"
+          android:imeOptions="actionNext"
+          android:id="@+id/tanggal"
+          android:textSize="12dp"
+          android:paddingStart="10dp"
+          android:clickable="true"
+          android:focusable="false"
+          android:cursorVisible="false"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:textColorHint="@color/darkGray"
+          android:textColor="@color/darkGray"
+          android:hint="Tanggal Resign"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:textColorHint="@color/darkGray"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:boxStrokeColor="@color/btnbsp"
+        app:hintTextAppearance="@style/HintText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+          android:nextFocusDown="@+id/alasan"
+          android:imeOptions="actionNext"
+          android:lines="1"
+          android:maxLines="1"
+          android:id="@+id/alasan"
+          android:textSize="12dp"
+          android:paddingStart="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:textColorHint="@color/darkGray"
+          android:textColor="@color/darkGray"
+          android:hint="Alasan Resign"
+          android:fitsSystemWindows="true"
+          android:breakStrategy="balanced"
+          android:inputType="textMultiLine"
+          android:singleLine="false"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+
+      <RelativeLayout
+        android:id="@+id/layoutprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <CheckBox
+          android:theme="@style/checkBoxStyle"
+          android:id="@+id/checkbox_sla"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/linkSLA"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="Persyaratan pengunduran diri, setuju ?"
+          android:textColor="@color/colorBlueDark"
+          android:layout_toRightOf="@+id/checkbox_sla"
+          android:textSize="12dp"/>
+
+      </RelativeLayout>
+
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/kirim"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:background="@drawable/roundedgray"
+        android:textAllCaps="false"
+        android:text="Ajukan"/>
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

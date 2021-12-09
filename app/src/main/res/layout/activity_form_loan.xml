@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:background="@color/background">
+
+  <LinearLayout
+    android:id="@+id/layoutText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="bottom"
+    android:layout_marginTop="10dp">
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="AJUKAN"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textgreen"
+      android:id="@+id/recomended"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=" PINJAMAN"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textblue"
+      android:textStyle="bold"
+      android:layout_toRightOf="@+id/recomended"/>
+
+  </LinearLayout>
+  <ScrollView
+    android:layout_below="@+id/layoutText"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+    android:layout_below="@+id/layoutText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/batasCicil"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:text="Dapatkan cicilan pinjaman hingga batas maksimum pinjaman"
+      android:textColor="@color/blacktext"
+      android:layout_marginBottom="10dp"
+      android:textSize="12dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:textColorHint="@color/darkGray"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginTop="10dp"
+      app:boxStrokeColor="@color/btnbsp"
+      app:hintTextAppearance="@style/HintText"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+      <com.google.android.material.textfield.TextInputEditText
+        android:nextFocusDown="@+id/penjamin_cicilan"
+        android:imeOptions="actionNext"
+        android:lines="1"
+        android:maxLines="1"
+        android:id="@+id/penjamin_cicilan"
+        android:textSize="12dp"
+        android:focusable="false"
+        android:paddingStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColorHint="@color/darkGray"
+        android:textColor="@color/darkGray"
+        android:drawableRight="@drawable/arrow_down"
+        android:hint="Pilih Penjamin Pinjaman"
+        android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:textColorHint="@color/darkGray"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginTop="10dp"
+      app:boxStrokeColor="@color/btnbsp"
+      app:hintTextAppearance="@style/HintText"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+      <com.google.android.material.textfield.TextInputEditText
+        android:nextFocusDown="@+id/lama_cicilan"
+        android:imeOptions="actionNext"
+        android:lines="1"
+        android:maxLines="1"
+        android:id="@+id/lama_cicilan"
+        android:textSize="12dp"
+        android:focusable="false"
+        android:paddingStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColorHint="@color/darkGray"
+        android:textColor="@color/darkGray"
+        android:drawableRight="@drawable/arrow_down"
+        android:hint="Lama Cicilan"
+        android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:textColorHint="@color/darkGray"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginTop="10dp"
+      app:boxStrokeColor="@color/btnbsp"
+      app:hintTextAppearance="@style/HintText"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+      <com.google.android.material.textfield.TextInputEditText
+        android:nextFocusDown="@+id/jumlah_cicilan"
+        android:imeOptions="actionNext"
+        android:lines="1"
+        android:maxLines="1"
+        android:id="@+id/jumlah_cicilan"
+        android:textSize="12dp"
+        android:paddingStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColorHint="@color/darkGray"
+        android:textColor="@color/darkGray"
+        android:hint="Nominal Pinjaman"
+        android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Signup Button -->
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/rincian_cicilan"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="20dp"
+      android:padding="12dp"
+      android:textAllCaps="false"
+      android:background="@drawable/rounded_btn"
+      android:textColor="@color/btnbsp"
+      android:text="Lihat Rincian"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/rincian"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rincian Pinjaman"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeStepGranularity="2sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/blacktext"/>
+
+      <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:padding="5dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical">
+        <TextView
+          android:layout_marginTop="2dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Jenis Pinjaman"
+          android:textSize="12sp"
+          android:textColor="@color/blacktext"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical">
+        <TextView
+          android:id="@+id/jenis_pinjaman"
+          android:layout_marginTop="2dp"
+          android:maxLines="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="jenis_pinjaman"
+          android:textSize="12sp"
+          android:textColor="@color/blacktext"/>
+
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:padding="5dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical">
+        <TextView
+          android:layout_marginTop="2dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Jasa x Lama Cicilan"
+          android:textSize="12sp"
+          android:textColor="@color/blacktext"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical">
+        <TextView
+          android:id="@+id/bunga_pinjaman"
+          android:layout_marginTop="2dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="bunga_bulanan"
+          android:textSize="12sp"
+          android:textColor="@color/blacktext"/>
+
+      </LinearLayout>
+    </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="vertical">
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Pinjaman"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/pinjaman_diajukan"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pinjaman_diajukan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/greenOne"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="vertical">
+          <TextView
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Pinjaman"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/nominal_dibayarkan"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nominal_dibayarkan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/bgFeatureOne"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="vertical">
+          <TextView
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cicilan Bulanan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/cicilan_perbulan"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cicilan_perbulan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="vertical">
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biaya Admin"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/biaya_admin"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="biaya_admin"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="vertical">
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biaya Transfer"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/biaya_transfer"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="biaya_transfer"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="vertical">
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biaya Provisi"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/biaya_provisi"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="biaya_provisi"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="vertical">
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jasa Berjalan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/bunga_berjalan"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bunga_berjalan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/greenOne"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="vertical">
+          <TextView
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Diterima"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/pinjaman_diterima"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pinjaman_diterima"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ajukan_cicilan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="12dp"
+        android:textAllCaps="false"
+        android:background="@drawable/roundedgray"
+        android:text="Ajukan Cicilan"/>
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+  </ScrollView>
+
+</RelativeLayout>

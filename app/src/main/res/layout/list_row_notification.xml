@@ -1,0 +1,79 @@
+
+<ru.rambler.libs.swipe_layout.SwipeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/item_height"
+  android:layout_marginBottom="1dp">
+
+  <!--CENTER. app:gravity="center" - is default value -->
+  <LinearLayout
+    android:id="@+id/contentList"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <TextView
+      android:id="@+id/title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/blacktext"
+      android:maxLines="2"
+      android:text="Test"/>
+
+    <TextView
+      android:id="@+id/description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/darkGreen"
+      android:maxLines="1"
+      android:text="Description"/>
+  </LinearLayout>
+
+  <!--RIGHT-->
+  <LinearLayout
+    android:id="@+id/deletenotification"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    app:gravity="right"
+    app:bring_to_clamp="150dp"
+    app:clamp="self"
+    app:sticky="100dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/red_btn_bg_color">
+
+    <ImageView
+      android:id="@+id/icon"
+      android:layout_gravity="center"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_delete_forever_white"
+      />
+
+    <TextView
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Delete"/>
+  </LinearLayout>
+
+<!--  &lt;!&ndash;LEFT&ndash;&gt;-->
+<!--  <FrameLayout-->
+<!--    android:layout_width="100dp"-->
+<!--    android:layout_height="match_parent"-->
+<!--    app:gravity="left"-->
+<!--    app:bring_to_clamp="100dp"-->
+<!--    app:clamp="self"-->
+<!--    app:sticky="none">-->
+
+<!--    <TextView-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:text="Test"/>-->
+<!--  </FrameLayout>-->
+</ru.rambler.libs.swipe_layout.SwipeLayout>

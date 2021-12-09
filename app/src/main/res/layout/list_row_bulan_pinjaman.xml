@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+      android:id="@+id/image"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+
+      <LinearLayout
+        android:layout_weight="0.22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/nameBulan"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="nama_penjamin"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+
+
+      <LinearLayout
+        android:layout_weight="0.33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:background="@drawable/arrow_right"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+  </RelativeLayout>
+</LinearLayout>

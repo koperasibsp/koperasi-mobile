@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/cardHeader"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:columnCount="4"
+  android:orientation="horizontal"
+  android:background="@drawable/circularbordersolid"
+  android:rowCount="4"
+  android:paddingTop="10dp"
+  android:paddingBottom="10dp">
+
+      <ImageView
+        android:layout_columnSpan="2"
+        android:layout_gravity="top"
+        android:layout_rowSpan="4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        app:srcCompat="@drawable/ic_launcher_round" />
+
+
+      <TextView
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_rowSpan="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pinjaman"
+        android:textSize="10sp"
+        android:textColor="@color/blacktext" />
+
+      <TextView
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_rowSpan="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Kode Pinjaman"
+        android:textSize="10sp"
+        android:textColor="@color/blacktext" />
+
+      <TextView
+        android:id="@+id/namaPinjaman"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_rowSpan="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pinjaman"
+        android:textSize="12sp"
+        android:textColor="@color/blacktext" />
+
+      <TextView
+        android:id="@+id/kodePinjaman"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_rowSpan="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Kode Pinjaman"
+        android:textSize="12sp"
+        android:textColor="@color/blacktext" />
+
+      <TextView
+        android:layout_marginTop="10dp"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_rowSpan="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pinjaman"
+        android:textSize="10sp"
+        android:textColor="@color/blacktext" />
+
+      <TextView
+        android:layout_marginTop="10dp"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_rowSpan="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Kode Pinjaman"
+        android:textSize="10sp"
+        android:textColor="@color/blacktext" />
+
+      <TextView
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_rowSpan="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pinjaman"
+        android:textSize="12sp"
+        android:textColor="@color/blacktext" />
+
+      <TextView
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_rowSpan="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Kode Pinjaman"
+        android:textSize="12sp"
+        android:textColor="@color/blacktext" />
+
+</GridLayout>

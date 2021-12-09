@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorWhite"
+  android:id="@+id/coordinator">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@color/background">
+
+    <RadioGroup
+      android:id="@+id/radioGroup"
+      android:checkedButton="@+id/radio_button_1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <RadioButton
+        android:id="@+id/radio_button_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checked="true"
+        android:text="none"/>
+      <RadioButton
+        android:id="@+id/radio_button_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="lunas"/>
+      <RadioButton
+        android:id="@+id/radio_button_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="belum lunas"/>
+      <RadioButton
+        android:id="@+id/radio_button_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="pending"/>
+    </RadioGroup>
+
+    <Button
+      android:layout_below="@+id/radioGroup"
+      android:layout_marginTop="10dp"
+      android:id="@+id/btn_submit_filter"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="submit" />
+
+  </RelativeLayout>
+  </ScrollView>
+</RelativeLayout>

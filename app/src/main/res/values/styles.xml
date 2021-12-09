@@ -1,0 +1,209 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextLabel" parent="AppTheme">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">#282828</item>
+        <item name="android:textSize">15dp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="borderlessButtonStyle">@style/Base.Widget.AppCompat.Button.Borderless</item>
+        <item name="colorAccent">#282828</item>
+        <item name="colorControlNormal">#282828</item>
+        <item name="colorControlActivated">#282828</item>
+    </style>
+
+    <style name="DialogTheme" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="DialogLoan" parent="Base.Theme.AppCompat.Dialog">
+      <item name="android:windowEnterAnimation">@anim/modal_in</item>
+      <item name="android:windowExitAnimation">@anim/modal_out</item>
+      <item name="android:layout_width">wrap_content</item>
+      <item name="android:layout_height">wrap_content</item>
+      <item name="android:windowBackground">@null</item>
+      <item name="android:windowNoTitle">true</item>
+      <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="AppTheme_Dark_Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center|center_vertical|center_horizontal</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:progressBarStyle">@style/Base.Widget.AppCompat.ProgressBar.Horizontal</item>
+        <item name="android:textColor">#ffff</item>
+
+    </style>
+    <style name="EditTextHint" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/darkbsp</item>
+        <item name="android:textColor">#282828</item>
+        <item name="android:textColorHint">#282828</item>\
+        <item name="colorControlNormal">@color/darkbsp</item>
+        <item name="colorControlActivated">#282828</item>
+        <item name="colorControlHighlight">@color/darkbsp</item>
+    </style>
+
+    <style name="dividerBase">
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="dividerHorizontal" parent="dividerBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item> // You can change thickness here.
+
+    </style>
+
+    <style name="dividerHorizontalwhite">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#c28e5e</item>
+        <item name="android:layout_height">1dp</item> // You can change thickness here.
+
+    </style>
+
+    <style name="dividerVertical" parent="dividerBase">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">#990000</item>
+        <item name="colorAccent">#0118CA</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">@color/colorBlue</item>
+        <item name="colorControlActivated">@color/btnbsp</item>
+        <item name="colorAccent">@color/darkbsp</item>
+        <item name="android:textColorSecondary">@color/darkbsp</item>
+    </style>
+
+    <style name="BaseTheme.App">
+
+    </style>
+
+    <style name="MyToolbarTheme"
+        parent="Theme.AppCompat.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="titleTextColor">@color/colorWhite</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/softbsp</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">6dp</item>
+        <item name="tabPaddingEnd">6dp</item>
+        <item name="tabBackground">@color/colorWhite</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/darkbsp</item>
+    </style>
+
+    <!-- for text -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/darkbsp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+  <style name="Widget.App.ActionMode" parent="Widget.AppCompat.ActionMode">
+    <item name="titleTextStyle">?attr/textAppearanceHeadline6</item>
+    <item name="subtitleTextStyle">?attr/textAppearanceSubtitle1</item>
+    <item name="background">@color/material_grey_900</item>
+  </style>
+
+  <style name="TintTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="colorAccent">@color/material_grey_900</item>
+  </style>
+
+  <style name="CheckBoxTintTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="colorAccent">@color/softbsp</item>
+  </style>
+
+
+  <style name="title_text_style">
+    <item name="android:textSize">16sp</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginLeft">16dp</item>
+    <item name="android:layout_marginTop">16dp</item>
+    <item name="android:textColor">#000</item>
+  </style>
+
+  <style name="subtitle_text_style">
+    <item name="android:textSize">13sp</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginLeft">16dp</item>
+    <item name="android:layout_marginTop">16dp</item>
+    <item name="android:layout_marginBottom">10dp</item>
+    <item name="android:textColor">#555555</item>
+  </style>
+
+  <style name="des_text_style">
+    <item name="android:textSize">13sp</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginLeft">16dp</item>
+    <item name="android:textColor">#666666</item>
+  </style>
+
+  <style name="HintText" parent="TextAppearance.Design.Hint">
+    <item name="android:textSize">12sp</item>
+    <item name="android:textColor">@color/btnbsp</item>
+  </style>
+
+  <style name="alert_dialog_light" parent="android:Theme.Dialog">
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowIsTranslucent">false</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">false</item>
+    <item name="android:windowBackground">@color/float_transparent</item>
+    <item name="android:windowAnimationStyle">@null</item>
+    <item name="android:backgroundDimEnabled">true</item>
+    <item name="android:backgroundDimAmount">0.4</item>
+
+    <item name="alertDialogDark">@drawable/dialoglight</item>
+    <item name="alertDialogTextColor">@android:color/black</item>
+    <item name="alertDialogContentTextColor">@android:color/black</item>
+  </style>
+
+
+  <style name="alert_dialog_dark" parent="alert_dialog_light">
+    <item name="android:backgroundDimAmount">0.8</item>
+    <item name="alertDialogDark">@drawable/dialogdark</item>
+    <item name="alertDialogTextColor">@android:color/white</item>
+    <item name="alertDialogContentTextColor">@android:color/white</item>
+  </style>
+
+  <style name="dialog_blue_button" parent="android:Widget.Button">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">31dp</item>
+    <item name="android:background">@drawable/button_background</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:paddingLeft">21dp</item>
+    <item name="android:paddingRight">21dp</item>
+    <item name="android:textColor">@color/button_text_color</item>
+  </style>
+
+</resources>

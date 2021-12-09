@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent" android:layout_height="match_parent">
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    android:background="@color/colorWhite">
+
+
+
+    <View
+      android:id="@+id/newsTime"
+      android:paddingLeft="5dp"
+      android:layout_below="@+id/contentImage"
+      android:layout_width="match_parent"
+      android:layout_height="12dp"
+      android:textSize="10dp"
+      android:background="@color/graytext"/>
+
+    <View
+      android:layout_marginTop="10dp"
+      android:paddingLeft="5dp"
+      android:layout_below="@+id/newsTime"
+      android:layout_width="match_parent"
+      android:layout_height="10dp"
+      android:background="@color/graytext"
+      android:textSize="12dp"
+      android:textColor="@color/blacktext"/>
+
+  </RelativeLayout>
+</androidx.cardview.widget.CardView>

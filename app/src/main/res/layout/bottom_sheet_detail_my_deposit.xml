@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/transparent"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/roundedwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:id="@+id/image"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_stripe_gray"/>
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_below="@+id/image"
+      android:id="@+id/textTenor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Deposit Number"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/depositNumber"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="number"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textValue"
+      android:layout_below="@+id/textTenor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Value"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/depositTotal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="Value"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textService"
+      android:layout_below="@+id/textValue"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Type"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/depositType"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="Jasa"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textTanggal"
+      android:layout_below="@+id/textService"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Tanggal"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/depositTanggal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="Tanggal"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textStatus"
+      android:layout_below="@+id/textTanggal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Keterangan"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/depositDesc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="Status"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textDesc"
+      android:layout_below="@+id/textStatus"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Status"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/depositStatus"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="Status"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+  </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fab="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/graybg">
+
+<!--  <com.google.android.material.appbar.AppBarLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">-->
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--      android:id="@+id/topAppBar"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="?attr/actionBarSize"-->
+<!--      android:background="@color/btnbdp"-->
+<!--      app:title="Info Pinjaman"-->
+<!--      app:menu="@menu/top_app_bar"-->
+<!--      />-->
+
+<!--  </com.google.android.material.appbar.AppBarLayout>-->
+
+  <LinearLayout
+    android:id="@+id/layoutprofile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:gravity="bottom"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="20dp">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="DETAIL"
+      android:textSize="18dp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18dp"
+      android:autoSizeMaxTextSize="100dp"
+      android:autoSizeStepGranularity="2dp"
+      android:textColor="@color/textgreen"
+      android:id="@+id/info_kiri"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=" PINJAMAN"
+      android:textSize="18dp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18dp"
+      android:autoSizeMaxTextSize="100dp"
+      android:autoSizeStepGranularity="2dp"
+      android:textColor="@color/textblue"
+      android:textStyle="bold"
+      android:layout_toRightOf="@+id/info_kiri"/>
+
+  </LinearLayout>
+  <LinearLayout
+    android:id="@+id/header_card"
+    android:layout_below="@+id/layoutprofile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/cardHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/circularbordersolid"
+      android:columnCount="3"
+      android:orientation="horizontal"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:rowCount="4">
+
+      <ImageView
+        android:id="@+id/imagePinjaman"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_rowSpan="4"
+        android:layout_columnSpan="1"
+        android:layout_gravity="top|center"
+        android:padding="10dp"
+        app:srcCompat="@drawable/ic_launcher_round" />
+
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:text="Nama Pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="10dp" />
+
+      <TextView
+        android:id="@+id/namaPinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="Nama Pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="12dp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_marginTop="5dp"
+        android:text="Kode Pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="10dp" />
+
+      <TextView
+        android:id="@+id/kodePinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="Kode Pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="12dp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Nilai Pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="10dp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Period Pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="10dp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Status Pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="10dp" />
+
+      <TextView
+        android:id="@+id/nilaiPinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_marginLeft="10dp"
+        android:text="nilai pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="12dp" />
+
+      <TextView
+        android:id="@+id/periodPinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_marginLeft="10dp"
+        android:text="status pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="12dp" />
+
+      <TextView
+        android:id="@+id/approvalPinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="1"
+        android:layout_gravity="fill"
+        android:layout_marginLeft="10dp"
+        android:text="period pinjaman"
+        android:textColor="@color/blacktext"
+        android:textSize="12dp" />
+
+    </GridLayout>
+
+  </LinearLayout>
+  <LinearLayout
+    android:id="@+id/detailPinjaman"
+    android:layout_below="@+id/header_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/circularbordersolid"
+
+    >
+    <TextView
+      android:layout_marginLeft="10dp"
+      android:layout_columnSpan="1"
+      android:layout_gravity="fill"
+      android:layout_rowSpan="1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:text="Sisa Pinjaman"
+      android:textSize="12dp"
+      android:textColor="@color/blacktext" />
+
+    <TextView
+      android:id="@+id/sisaPinjaman"
+      android:layout_marginLeft="10dp"
+      android:layout_columnSpan="2"
+      android:layout_gravity="fill"
+      android:layout_rowSpan="1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Sisa Pinjaman"
+      android:textSize="12dp"
+      android:textColor="@color/blacktext" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_below="@+id/detailPinjaman"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <ProgressBar
+      android:id="@+id/proBar"
+      style="?android:attr/progressBarStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"/>
+
+    <ListView
+      android:id="@+id/listLoan"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:dividerHeight="1dp"
+      android:divider="@color/graytext"
+      android:layout_alignParentTop="true"
+      android:layout_marginBottom="10dp"/>
+  </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BSP Koperasi</string>
+    <string name="title_activity_pinjaman">Pinjaman</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="crash_dialog_title">Attendance v1.0</string>
+    <string name="crash_dialog_text">Terjadi kesalahan sehingga aplikasi berhenti. Harap membantu kami memperbaiki ini dengan mengirimkan data yang error,
+    yang harus Anda lakukan adalah <b>klik OK.</b></string>
+    <string name="crash_dialog_comment_prompt">Anda bisa menambahkan komentar tentang masalah di bawah ini:</string>
+    <string name="crash_dialog_ok_toast">Terima Kasih !</string>
+    <string name="you_ordered">You\'ve ordered:\n%s</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="LOADING">Loading…</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/background">
+
+  <LinearLayout
+    android:id="@+id/layoutText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:gravity="bottom"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="20dp">
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="AJUKAN"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textgreen"
+      android:id="@+id/recomended"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=" PINJAMAN"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textblue"
+      android:textStyle="bold"
+      android:layout_toRightOf="@+id/recomended"/>
+
+  </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:layout_below="@+id/layoutText"
+      android:id="@+id/recyclerview_id"
+      android:padding="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

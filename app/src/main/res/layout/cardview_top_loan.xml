@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="200dp"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="5dp"
+  android:layout_marginLeft="10dp"
+  android:layout_marginRight="5dp"
+  android:layout_marginBottom="5dp"
+  android:paddingBottom="5dp"
+  android:id="@+id/cardview_id"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:paddingTop="70dp"
+    android:id="@+id/vDescription"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    android:elevation="8dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/top_loan_tenor"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Loan Tenor"
+      android:textColor="@color/darkbsp"
+      android:textSize="12sp" />
+
+    <TextView
+      android:id="@+id/top_loan_description"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:maxLines="2"
+      android:text="Loan Description"
+      android:textColor="@color/darkbsp"
+      android:textSize="10sp" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/roundedwhite"
+    android:orientation="vertical"
+    android:paddingLeft="80dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp">
+
+
+    <TextView
+      android:id="@+id/top_loan_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Loan Name"
+      android:maxLines="2"
+      android:fontFamily="@font/roboto_bold"
+      android:textColor="@color/darkbsp"
+      android:textSize="14sp" />
+
+  </LinearLayout>
+
+
+  <LinearLayout
+    android:id="@+id/vLogo"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="-40dp"
+    android:background="@drawable/layout_corner_rounded"
+    android:padding="10dp"
+    android:elevation="8dp"
+    android:orientation="vertical">
+
+    <ImageView
+      android:id="@+id/top_loan_logo"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:src="@drawable/loan"/>
+
+  </LinearLayout>
+
+
+
+</RelativeLayout>

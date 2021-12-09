@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/transparent"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/roundedwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:id="@+id/image"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_stripe_gray"/>
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/logo"
+      android:layout_below="@+id/image"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <ImageView
+          android:id="@+id/logoPinjaman"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:src="@drawable/transaction"/>
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_below="@+id/logo"
+      android:id="@+id/textTenor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/graybg"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Nama Pinjaman"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/namaPinjaman"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="nama pinjaman"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textValue"
+      android:layout_below="@+id/textTenor"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Bunga Pinjaman"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/bungaPinjaman"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="0%"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textService"
+      android:layout_below="@+id/textValue"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/graybg"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Plafon"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/plafonPinjaman"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="Jasa"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textTanggal"
+      android:layout_below="@+id/textService"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Tenor"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:id="@+id/tenorPinjaman"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:text="tenor"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textStatus"
+      android:layout_below="@+id/textTanggal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/graybg"
+      android:orientation="horizontal"
+      android:paddingTop="5dp"
+      android:paddingLeft="5dp"
+      android:paddingRight="5dp">
+
+      <LinearLayout
+        android:layout_weight="0.28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Keterangan"
+          android:textSize="12dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/textDesc"
+      android:layout_below="@+id/textStatus"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/graybg"
+      android:orientation="horizontal"
+      android:paddingRight="5dp"
+      android:paddingLeft="5dp"
+      android:paddingBottom="5dp"
+      android:layout_marginBottom="10dp">
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+          android:id="@+id/keteranganPinjaman"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="keterangan"
+          android:textSize="10dp"
+          android:textColor="@color/blacktext"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/btnAjukan"
+      android:layout_below="@+id/textDesc"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal"
+      android:padding="10dp">
+
+      <LinearLayout
+        android:layout_weight="0.25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <Button
+          android:id="@+id/ajukanPinjaman"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/roundedgray"
+          android:text="Ajukan Pinjaman"
+          android:textAllCaps="false"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+  </RelativeLayout>
+
+</RelativeLayout>

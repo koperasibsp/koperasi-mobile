@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string-array name="filterloan">
+    <item>semua</item>
+    <item>menunggu</item>
+    <item>lunas</item>
+    <item>belum lunas</item>
+    <item>ditolak</item>
+  </string-array>
+
+  <string-array name="filterDeposit">
+    <item>semua</item>
+    <item>terbaru</item>
+    <item>terlama</item>
+    <item>paid</item>
+    <item>unpaid</item>
+    <item>debit</item>
+    <item>credit</item>
+  </string-array>
+
+  <array name="tick_below_text_length_5">
+    <item>one</item>
+    <item>two</item>
+    <item>three</item>
+    <item>four</item>
+    <item>five</item>
+  </array>
+  <array name="last_next_length_6">
+    <item>last</item>
+    <item></item>
+    <item></item>
+    <item></item>
+    <item></item>
+    <item>next</item>
+  </array>
+  <array name="small_normal_middle_large_length_7">
+    <item>small</item>
+    <item></item>
+    <item>normal</item>
+    <item></item>
+    <item>middle</item>
+    <item></item>
+    <item>large</item>
+  </array>
+  <array name="irregular_length_6">
+    <item>small</item>
+    <item></item>
+    <item>normal</item>
+    <item></item>
+    <item>middle</item>
+    <item>large</item>
+  </array>
+
+  <array name="tick_below_text_length_6">
+    <item>Aa</item>
+    <item>Bb</item>
+    <item>Cc</item>
+    <item>Dd</item>
+    <item>Ee</item>
+    <item>Ff</item>
+  </array>
+  <array name="last_next_length_2">
+    <item>last</item>
+    <item>next</item>
+  </array>
+
+</resources>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fab="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/graybg">
+
+  <LinearLayout
+    android:id="@+id/layoutprofile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:gravity="bottom"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="20dp">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="INFO"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textgreen"
+      android:id="@+id/info_kiri"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=" BANK"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textblue"
+      android:textStyle="bold"
+      android:layout_toRightOf="@+id/info_kiri"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_below="@+id/layoutprofile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roundedwhite5dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+
+    android:padding="5dp">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/atas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="horizontal"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <TextView
+            android:id="@+id/textNamaAkun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nama akun"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12dp" />
+        </LinearLayout>
+
+      </LinearLayout>
+      <LinearLayout
+        android:id="@+id/bawah"
+        android:layout_below="@+id/atas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="horizontal"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <TextView
+            android:id="@+id/valueNamaAkun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NAMA AKUN"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+      </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/tBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="horizontal"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <TextView
+            android:id="@+id/textNamaBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nama bank"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12dp" />
+        </LinearLayout>
+
+      </LinearLayout>
+      <LinearLayout
+        android:id="@+id/vBank"
+        android:layout_below="@+id/tBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="horizontal"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <TextView
+            android:id="@+id/valueNamaBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NAMA AKUN"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+      </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/tNomorAkun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="horizontal"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <TextView
+            android:id="@+id/textNomorAkun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nomor rekening"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12dp" />
+        </LinearLayout>
+
+      </LinearLayout>
+      <LinearLayout
+        android:id="@+id/vNomorAkun"
+        android:layout_below="@+id/tNomorAkun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="horizontal"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <TextView
+            android:id="@+id/valueNomorAkun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOMOR AKUN"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+      </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/tCabang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="horizontal"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <TextView
+            android:id="@+id/textCabang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cabang bank"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12dp" />
+        </LinearLayout>
+
+      </LinearLayout>
+      <LinearLayout
+        android:id="@+id/vCabang"
+        android:layout_below="@+id/tCabang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="left"
+          android:orientation="horizontal"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <TextView
+            android:id="@+id/valueCabang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CABANG BANK"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+      </LinearLayout>
+    </RelativeLayout>
+
+  </LinearLayout>
+
+</RelativeLayout>

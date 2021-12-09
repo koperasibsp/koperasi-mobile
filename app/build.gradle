@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "id.co.bspguard.android.bravo"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 24
+        versionName "1.24"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                onesignal_app_id               : 'bd074873-34b8-4884-8893-726d866600a1',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+        vectorDrawables.useSupportLibrary = true
+    }
+//    lintOptions {
+//      checkReleaseBuilds false
+//      abortOnError false
+//    }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+    signingConfigs {
+      release {
+        storeFile = file('/Users/macbook/Keystore/upload-keystore.jks')
+        storePassword = 'ksbsp2020'
+        keyAlias = 'upload'
+        keyPassword = 'ksbsp2020'
+      }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+              variant.outputs.all {
+                outputFileName = new File("ksbsp.apk")
+              }
+            }
+        }
+    }
+  sourceSets {
+    main {
+      res {
+        srcDirs 'src/main/res', 'src/main/res/layout/account'
+      }
+    }
+  }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:2.0.1'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.onesignal:OneSignal:3.10.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'ch.acra:acra:4.9.2'
+    implementation 'com.google.android.material:material:1.0.0-alpha10'
+
+    implementation('com.google.android:flexbox:0.3.2') {
+        exclude group: 'com.android.support'
+    }
+
+    implementation 'com.facebook.shimmer:shimmer:0.4.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.yarolegovich:lovely-dialog:1.1.1'
+    implementation 'cc.cloudist.acplibrary:library:1.2.1'
+    implementation 'com.airbnb.android:lottie:3.4.1'
+    implementation 'ru.rambler.android:swipe-layout:1.1.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.github.TutorialsAndroid:progressx:v6.0.19'
+    implementation 'com.nex3z:notification-badge:1.0.4'
+    implementation 'com.github.kanytu:android-parallax-recyclerview:v1.2'
+  implementation 'com.karumi:dexter:6.2.2'
+
+
+
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fab="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/graybg"
+  android:fitsSystemWindows="true">
+
+  <LinearLayout
+    android:id="@+id/layoutprofile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:gravity="bottom"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="20dp">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="NOTIFICATION"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textgreen"
+      android:id="@+id/info_kiri"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=" ANGGOTA"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textblue"
+      android:textStyle="bold"
+      android:layout_toRightOf="@+id/info_kiri"/>
+
+  </LinearLayout>
+
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/listNotification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:layout_weight="1"
+    android:scrollbars="vertical"/>
+
+  <ImageView
+    android:id="@+id/notfound"
+    android:layout_gravity="center"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_notification_notfound"
+    android:visibility="gone"
+    />
+
+  <TextView
+    android:id="@+id/empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:text="No Records"
+    android:visibility="gone" />
+
+</LinearLayout>

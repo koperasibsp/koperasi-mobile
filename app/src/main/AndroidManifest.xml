@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="id.co.bspguard.android.bravo">
+
+  <application
+    android:name=".AppController"
+    android:allowBackup="true"
+    android:hardwareAccelerated="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:logo="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    android:usesCleartextTraffic="true">
+    <activity android:name=".accounts.ResetEmail"></activity>
+    <activity android:name=".accounts.ResetPassword"></activity>
+
+    <activity android:name=".memberloan.FormChangeDeposit" />
+    <activity android:name=".loan.ApprovalLoan" />
+    <activity android:name=".changeavatar.ChangeAvatar" />
+    <activity
+      android:name=".splash_screen"
+      android:label="@string/app_name"
+      android:noHistory="true"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data
+          android:host="bsp.co.id"
+          android:scheme="http" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".MainActivity"
+      android:configChanges="orientation"
+      android:label="@string/app_name"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".accounts.Login"
+      android:label="@string/app_name"
+      android:noHistory="true"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.NoActionBar" />
+    <activity
+      android:name=".accounts.Signup"
+      android:label="@string/app_name"
+      android:noHistory="true"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.NoActionBar" />
+    <activity
+      android:name=".OpenBrowser"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".accounts.ForgotPassword"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".calculator.Calculator"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".bankmember.BankMember"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".contact.Contact"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".accounts.NotificationPage"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".news.MainNews"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".news.NewsDetails"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".loan.Loan"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".memberloan.ListLoan"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".memberdeposit.ListDeposit"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".memberprofile.MemberProfile"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".memberresign.MainResign"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".memberretrievedeposit.MainRetrieveDeposit"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".memberloan.DetailLoan"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".memberdeposit.DetailDeposit"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".loan.FormLoan"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".ConnectionLost"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".notifications.MainNotifications"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".setting.AccountSetting"
+      android:screenOrientation="portrait" />
+
+    <meta-data
+      android:name="com.onesignal.NotificationOpened.DEFAULT"
+      android:value="DISABLE" />
+
+    <provider
+      android:name="androidx.core.content.FileProvider"
+      android:authorities="${applicationId}.provider"
+      android:exported="false"
+      android:grantUriPermissions="true">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/provider_paths" />
+    </provider>
+  </application>
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="com.android.internal.policy.PhoneWindow" />
+  <uses-permission android:name="com.samsung.android.provider.filterprovider.permission.READ_FILTER" />
+  <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+  <uses-permission android:name="com.samsung.android.motion.IMotionRecognitionService" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+  <uses-permission android:name="com.samsung.android.*" />
+
+</manifest>

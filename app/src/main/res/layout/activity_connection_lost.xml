@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash_screen"
+    android:id="@+id/splash_screen"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+          android:id="@+id/lottie_image"
+          android:layout_width="match_parent"
+          android:layout_height="200sp"
+          app:lottie_fileName="connection_lost.json"
+          app:lottie_loop="true"
+          app:lottie_autoPlay="true"/>
+
+      <TextView
+        android:id="@+id/powered_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins"
+        android:text="OOPS..."
+        android:textColor="@color/yellow"
+        android:textSize="20dp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Koneksi internet anda terputus"
+        android:textColor="@color/grey"
+        android:fontFamily="@font/poppins"/>
+
+      <Button
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/red_button_background"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

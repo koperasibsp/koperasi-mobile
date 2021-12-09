@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/transparent"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/roundedwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:id="@+id/image"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:background="@drawable/roundedwhite5dp"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_stripe_gray"/>
+      </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+      android:layout_marginTop="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/menu_baru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+          android:id="@+id/lPinjaman"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/loan"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pinjaman"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lSimpanan"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/wallet"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpanan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lPengajuan"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/transaction"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengajuan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lPencairan"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/money_bag"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pencairan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+          android:id="@+id/lKalkulator"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/c_pinjaman"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalkulator"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lBank"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/data_bank"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lHubungi"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/contact"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hubungi"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lResign"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/exit"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resign"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+          android:id="@+id/lApproveLoan"
+          android:layout_weight="0.25"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/ic_approve_loan"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Approval"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lChangeDeposit"
+          android:layout_weight="0.25"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="42dp"
+              android:layout_height="42dp"
+              android:src="@mipmap/change_deposit"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubah Simpanan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+          android:id="@+id/lLogout"
+          android:layout_weight="0.25"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/logout_menu"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+</RelativeLayout>

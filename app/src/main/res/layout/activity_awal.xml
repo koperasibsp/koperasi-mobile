@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/layoutViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutprofile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KOPERASI"
+                    android:textSize="18sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="18sp"
+                    android:autoSizeMaxTextSize="100sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:textColor="@color/textgreen"
+                    android:id="@+id/info_kiri"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" BSP"
+                    android:textSize="18sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="18sp"
+                    android:autoSizeMaxTextSize="100sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:textColor="@color/textblue"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/info_kiri"/>
+
+
+              <ImageView
+                android:id="@+id/notificationBtn"
+                android:transitionName="goToProfile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="13dp"
+                android:src="@drawable/notification" />
+
+              <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/badge"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="-16dp"
+                android:layout_marginTop="-8dp"
+                android:textSize="12dp"
+                app:nbBackground="@drawable/badge_bg"
+                app:nbMaxTextLength="2"/>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="@drawable/bg_profile"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/profile_image"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/softbsp"/>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nama member"
+                    android:textColor="@color/darkbsp"
+                    android:textStyle="bold"
+                    android:textSize="21sp"
+                    />
+
+                <TextView
+                    android:id="@+id/no_member"
+                    android:layout_gravity="center_horizontal"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkbsp"
+                    android:text="nomor koperasi"/>
+
+                <TextView
+                    android:id="@+id/viewprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/roundedgray"
+                    android:layout_marginTop="10dp"
+                    android:text="View Profile"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+              <com.google.android.material.tabs.TabLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/tabDots"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@drawable/selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"/>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true">
+                     <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentTop="true" />
+                </androidx.cardview.widget.CardView>
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:gravity="bottom"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INFO"
+                    android:textSize="18sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="18sp"
+                    android:autoSizeMaxTextSize="100sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:textColor="@color/textgreen"
+                    android:id="@+id/recomended"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" SIMPANAN"
+                    android:textSize="18sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="18sp"
+                    android:autoSizeMaxTextSize="100sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:textColor="@color/textblue"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/recomended"/>
+
+            </RelativeLayout>
+
+            <!--<View style="@style/dividerHorizontal"/>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+                        android:weightSum="3"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Simpanan"
+                                android:textColor="@color/darkbsp"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/total_simpanan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/darkbsp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/darkbsp"
+                                android:text="Pinjaman"
+                                android:textSize="15sp"
+                                />
+                            <TextView
+                                android:id="@+id/total_pinjaman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/darkbsp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+      <LinearLayout
+        android:id="@+id/menu_baru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+          android:id="@+id/lPinjaman"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/loan"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pinjaman"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lSimpanan"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/wallet"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpanan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lPengajuan"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/transaction"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengajuan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lPencairan"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/money_bag"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pencairan"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+          android:id="@+id/lKalkulator"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/c_pinjaman"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalkulator"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lBank"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/data_bank"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lHubungi"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="2dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/contact"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hubungi"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/lMore"
+          android:layout_weight="0.25"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingBottom="2dp"
+          android:paddingTop="15dp"
+          android:paddingLeft="4dp"
+          android:paddingRight="4dp">
+
+          <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@drawable/circle_white">
+            <ImageView
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:src="@drawable/more_ic"/>
+          </LinearLayout>
+
+          <TextView
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="more"
+            android:textSize="12sp"
+            android:textColor="@color/blacktext"/>
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/menuatas"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_marginTop="-15dp"-->
+<!--                android:padding="5dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true">-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/loan"-->
+<!--                            android:text="Pinjaman"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:id="@+id/btn_pinjaman"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true">-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/wallet"-->
+<!--                            android:text="Simpanan"-->
+<!--                            android:id="@+id/btn_simpanan"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true">-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/exit"-->
+<!--                            android:text="Resign"-->
+<!--                            android:id="@+id/btn_resign"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/menubawah"-->
+<!--                android:layout_below="@id/menuatas"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:padding="5dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true"-->
+<!--                        >-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/money_bag"-->
+<!--                            android:text="Pencairan"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:id="@+id/btn_pencairan"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true"-->
+<!--                        >-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/transaction"-->
+<!--                            android:text="Pengajuan"-->
+<!--                            android:id="@+id/btn_pengajuan"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true"-->
+<!--                        >-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/contact"-->
+<!--                            android:text="Hubungi"-->
+<!--                            android:id="@+id/contact"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/menuakhir"-->
+<!--                android:layout_below="@id/menubawah"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:padding="5dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true"-->
+<!--                        >-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/c_pinjaman"-->
+<!--                            android:text="Kalkulator"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:id="@+id/kalukaltorPinjaman"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true"-->
+<!--                        >-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/data_bank"-->
+<!--                            android:text="Data Bank"-->
+<!--                            android:id="@+id/databank"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_weight="0.25"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingBottom="2dp"-->
+<!--                    android:paddingTop="2dp"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingRight="4dp">-->
+
+<!--                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        app:cardCornerRadius="5dp"-->
+<!--                        app:cardUseCompatPadding="true"-->
+<!--                        >-->
+
+<!--                        <Button-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#F8F8F8"-->
+<!--                            android:drawableTop="@drawable/logout_menu"-->
+<!--                            android:text="Logout"-->
+<!--                            android:id="@+id/logout"-->
+<!--                            android:textSize="12dp"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textColor="#000"-->
+<!--                            android:paddingBottom="15dp"-->
+<!--                            android:paddingTop="8dp"/>-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+            <RelativeLayout
+              android:id="@+id/top5loan"
+              android:layout_below="@id/menu_baru"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:layout_marginBottom="20dp"
+              android:background="@color/bgFeatureOne">
+
+              <LinearLayout
+                android:id="@+id/top5LoanTitle"
+                android:layout_width="135dp"
+                android:layout_height="150dp"
+                android:background="@color/bgFeatureTwo"
+                android:orientation="vertical">
+
+                <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="5 Top Pinjaman"
+                  android:textColor="@color/darkbsp"
+                  android:textAllCaps="true"
+                  android:fontFamily="@font/ubuntu_medium"
+                  android:textSize="20dp"
+                  android:layout_marginBottom="10dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginTop="20dp"/>
+
+                <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="5dp"
+                  android:background="@color/bgFeatureThree"
+                  tools:layout_conversion_absoluteHeight="51dp"
+                  tools:layout_editor_absoluteY="619dp"
+                  tools:layout_editor_absoluteX="0dp"
+                  tools:layout_conversion_absoluteWidth="135dp">
+                <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="10dp"
+                  android:textSize="12dp"
+                  android:fontFamily="@font/ubuntu"
+                  android:text="5 Jenis Pinjaman Terbanyak Diajukan Anggota"
+                  android:textColor="@color/darkbsp"/>
+                </LinearLayout>
+              </LinearLayout>
+              <androidx.recyclerview.widget.RecyclerView
+                android:paddingTop="5dp"
+                android:id="@+id/recyclerviewTopLoan"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_toRightOf="@+id/top5LoanTitle"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/darkbsp"
+                android:text="2020"/>
+
+            <TextView
+              android:id="@+id/privacy_policy"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:textColor="@color/darkbsp"
+              android:text="Privacy Policy"
+              android:layout_marginBottom="15dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

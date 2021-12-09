@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/background">
+
+  <RelativeLayout
+    android:id="@+id/layoutprofile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    android:padding="4dp"
+    android:gravity="left"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="20dp">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="PENGATURAN"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textgreen"
+      android:id="@+id/info_kiri"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=" AKUN"
+      android:textSize="18sp"
+      android:autoSizeTextType="uniform"
+      android:autoSizeMinTextSize="18sp"
+      android:autoSizeMaxTextSize="100sp"
+      android:autoSizeStepGranularity="2sp"
+      android:textColor="@color/textblue"
+      android:textStyle="bold"
+      android:layout_toRightOf="@+id/info_kiri"/>
+
+  </RelativeLayout>
+
+  <LinearLayout
+    android:layout_below="@+id/layoutprofile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+      android:id="@+id/changeEmail"
+      android:layout_marginTop="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:background="@drawable/roundedwhite"
+      android:gravity="center_vertical"
+      android:padding="10dp">
+
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:gravity="center_vertical"
+        android:text="Ubah Email"
+        android:textColor="@color/blacktext"
+        android:textSize="13sp" />
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        app:srcCompat="@drawable/email_black" />
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        app:srcCompat="@drawable/arrow_right" />
+
+    </RelativeLayout>
+    <RelativeLayout
+      android:id="@+id/changePassword"
+      android:layout_marginTop="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:background="@drawable/roundedwhite"
+      android:gravity="center_vertical"
+      android:padding="10dp">
+
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:gravity="center_vertical"
+        android:text="Ubah Password"
+        android:textColor="@color/blacktext"
+        android:textSize="13sp" />
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        app:srcCompat="@drawable/key_black" />
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        app:srcCompat="@drawable/arrow_right" />
+
+    </RelativeLayout>
+
+  </LinearLayout>
+
+</RelativeLayout>
